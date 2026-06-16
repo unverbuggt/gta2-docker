@@ -1,0 +1,14 @@
+config1/*
+!config1/.wine/drive_c/muh
+config2/*
+!config2/.wine/drive_c/muh
+config3/*
+!config3/.wine/drive_c/muh
+config4/*
+!config4/.wine/drive_c/muh
+config5/*
+!config5/.wine/drive_c/muh
+config6/*
+!config6/.wine/drive_c/muh
+game/*
+!game/GTA2/player/muh

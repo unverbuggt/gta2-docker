@@ -1,0 +1,11 @@
+#!/bin/sh
+rm -Rf config2/.wine
+rm -Rf config3/.wine
+rm -Rf config4/.wine
+rm -Rf config5/.wine
+rm -Rf config6/.wine
+cp -R config1/.wine config2
+cp -R config1/.wine config3
+cp -R config1/.wine config4
+cp -R config1/.wine config5
+cp -R config1/.wine config6

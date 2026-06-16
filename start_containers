@@ -1,0 +1,8 @@
+#!/bin/sh
+docker container start wine-gta2-1
+docker container start wine-gta2-2
+docker container start wine-gta2-3
+docker container start wine-gta2-4
+docker container start wine-gta2-5
+docker container start wine-gta2-6
+

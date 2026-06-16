@@ -1,0 +1,8 @@
+#!/bin/sh
+docker container stop wine-gta2-1
+docker container stop wine-gta2-2
+docker container stop wine-gta2-3
+docker container stop wine-gta2-4
+docker container stop wine-gta2-5
+docker container stop wine-gta2-6
+
