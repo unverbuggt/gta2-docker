@@ -24,14 +24,14 @@ Now do the following:
 5. Click "OK" a few times until "Winetricks - chose a wineprefix" is shown. Press OK.
 6. Decide whether or not to help Winetricks development.
 7. Check "Install Windows DLL or component" -> OK.
-8. check "directplay" and press OK.
+8. Check "directplay" and press OK.
 9. Press OK a few times and wait for Installation to finish. Press OK on the regsvr32 windows.
 10. Press Cancel a few times.
 11. Download GTA2 from [Rockstar Classics](https://gta.com.ua/rockstargames-classics-free-download.phtml).
 12. Extract GTA2.exe from the archive GTA2INSTALLER.ZIP (md5sum 4bf0b5f995d659090b681dd7b410499e) to `./game`.
 13. In WineGUI click on "Run Program..." and select "C:\GTA2.exe" -> "Open". 
 14. "Next >", accept agreement, Change "Install GTA2 to" to "C:\GTA2", "Next >", "Install" and "Finish".
-15. Connect to all containers (first on port 3001, second on 3002 and so forth) and Start "GTA2 Manager".
+15. Start "GTA2 Manager".
 16. At the "Video" Tab select "800x600".
 17. At "Control" press "Default Keyboard" or change to your liking.
 18. Start the game once with the "GTA2" Button.
@@ -95,4 +95,6 @@ Connect to the docker containers via a modern web browser:
 To start multiplayer gaming:
 1. In "GTA2 Manager" switch to tab "Network" and click "Start Network Game".
 2. One Player need to create a game, the others join.
+
+Check out the [GTA 1/GTA 2 Direct IP multiplayer guide](https://gtaforums.com/topic/982736-gta-1gta-2-direct-ip-multiplayer-guide/) for details.
 
