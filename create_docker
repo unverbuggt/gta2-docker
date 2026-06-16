@@ -1,0 +1,2 @@
+#/bin/sh
+PUID=$(id -u) PGID=$(id -g) docker compose create

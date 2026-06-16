@@ -1,0 +1,350 @@
+services:
+  wine-gta2-1:
+    image: lscr.io/linuxserver/winegui:latest
+    container_name: wine-gta2-1
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      #- SUBFOLDER=/wine1/
+      - TITLE=GTA2-1
+      - SELKIES_UI_TITLE=GTA2-1
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=en_US.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=800
+      - SELKIES_MANUAL_HEIGHT=600
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config1:/config
+      - ./game:/config/.wine/drive_c
+      - ./game1/player/hiscores.hsc:/config/.wine/drive_c/GTA2/player/hiscores.hsc
+      - ./game1/player/plyslot0.dat:/config/.wine/drive_c/GTA2/player/plyslot0.dat
+      - ./game1/player/plyslot1.dat:/config/.wine/drive_c/GTA2/player/plyslot1.dat
+      - ./game1/player/plyslot2.dat:/config/.wine/drive_c/GTA2/player/plyslot2.dat
+      - ./game1/player/plyslot3.dat:/config/.wine/drive_c/GTA2/player/plyslot3.dat
+      - ./game1/player/plyslot4.dat:/config/.wine/drive_c/GTA2/player/plyslot4.dat
+      - ./game1/player/plyslot5.dat:/config/.wine/drive_c/GTA2/player/plyslot5.dat
+      - ./game1/player/plyslot6.dat:/config/.wine/drive_c/GTA2/player/plyslot6.dat
+      - ./game1/player/plyslot7.dat:/config/.wine/drive_c/GTA2/player/plyslot7.dat
+    ports:
+      - 3011:3000
+      - 3001:3001
+    shm_size: "1gb"
+  wine-gta2-2:
+    image: lscr.io/linuxserver/winegui:latest
+    container_name: wine-gta2-2
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      #- SUBFOLDER=/wine1/
+      - TITLE=GTA2-2
+      - SELKIES_UI_TITLE=GTA2-2
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=en_US.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=800
+      - SELKIES_MANUAL_HEIGHT=600
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config2:/config
+      - ./game:/config/.wine/drive_c
+      - ./game2/player/hiscores.hsc:/config/.wine/drive_c/GTA2/player/hiscores.hsc
+      - ./game2/player/plyslot0.dat:/config/.wine/drive_c/GTA2/player/plyslot0.dat
+      - ./game2/player/plyslot1.dat:/config/.wine/drive_c/GTA2/player/plyslot1.dat
+      - ./game2/player/plyslot2.dat:/config/.wine/drive_c/GTA2/player/plyslot2.dat
+      - ./game2/player/plyslot3.dat:/config/.wine/drive_c/GTA2/player/plyslot3.dat
+      - ./game2/player/plyslot4.dat:/config/.wine/drive_c/GTA2/player/plyslot4.dat
+      - ./game2/player/plyslot5.dat:/config/.wine/drive_c/GTA2/player/plyslot5.dat
+      - ./game2/player/plyslot6.dat:/config/.wine/drive_c/GTA2/player/plyslot6.dat
+      - ./game2/player/plyslot7.dat:/config/.wine/drive_c/GTA2/player/plyslot7.dat
+    ports:
+      - 3012:3000
+      - 3002:3001
+    shm_size: "1gb"
+  wine-gta2-3:
+    image: lscr.io/linuxserver/winegui:latest
+    container_name: wine-gta2-3
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      #- SUBFOLDER=/wine1/
+      - TITLE=GTA2-3
+      - SELKIES_UI_TITLE=GTA2-3
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=en_US.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=800
+      - SELKIES_MANUAL_HEIGHT=600
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config3:/config
+      - ./game:/config/.wine/drive_c
+      - ./game3/player/hiscores.hsc:/config/.wine/drive_c/GTA2/player/hiscores.hsc
+      - ./game3/player/plyslot0.dat:/config/.wine/drive_c/GTA2/player/plyslot0.dat
+      - ./game3/player/plyslot1.dat:/config/.wine/drive_c/GTA2/player/plyslot1.dat
+      - ./game3/player/plyslot2.dat:/config/.wine/drive_c/GTA2/player/plyslot2.dat
+      - ./game3/player/plyslot3.dat:/config/.wine/drive_c/GTA2/player/plyslot3.dat
+      - ./game3/player/plyslot4.dat:/config/.wine/drive_c/GTA2/player/plyslot4.dat
+      - ./game3/player/plyslot5.dat:/config/.wine/drive_c/GTA2/player/plyslot5.dat
+      - ./game3/player/plyslot6.dat:/config/.wine/drive_c/GTA2/player/plyslot6.dat
+      - ./game3/player/plyslot7.dat:/config/.wine/drive_c/GTA2/player/plyslot7.dat
+    ports:
+      - 3013:3000
+      - 3003:3001
+    shm_size: "1gb"
+  wine-gta2-4:
+    image: lscr.io/linuxserver/winegui:latest
+    container_name: wine-gta2-4
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      #- SUBFOLDER=/wine1/
+      - TITLE=GTA2-4
+      - SELKIES_UI_TITLE=GTA2-4
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=en_US.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=800
+      - SELKIES_MANUAL_HEIGHT=600
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config4:/config
+      - ./game:/config/.wine/drive_c
+      - ./game4/player/hiscores.hsc:/config/.wine/drive_c/GTA2/player/hiscores.hsc
+      - ./game4/player/plyslot0.dat:/config/.wine/drive_c/GTA2/player/plyslot0.dat
+      - ./game4/player/plyslot1.dat:/config/.wine/drive_c/GTA2/player/plyslot1.dat
+      - ./game4/player/plyslot2.dat:/config/.wine/drive_c/GTA2/player/plyslot2.dat
+      - ./game4/player/plyslot3.dat:/config/.wine/drive_c/GTA2/player/plyslot3.dat
+      - ./game4/player/plyslot4.dat:/config/.wine/drive_c/GTA2/player/plyslot4.dat
+      - ./game4/player/plyslot5.dat:/config/.wine/drive_c/GTA2/player/plyslot5.dat
+      - ./game4/player/plyslot6.dat:/config/.wine/drive_c/GTA2/player/plyslot6.dat
+      - ./game4/player/plyslot7.dat:/config/.wine/drive_c/GTA2/player/plyslot7.dat
+    ports:
+      - 3014:3000
+      - 3004:3001
+    shm_size: "1gb"
+  wine-gta2-5:
+    image: lscr.io/linuxserver/winegui:latest
+    container_name: wine-gta2-5
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      #- SUBFOLDER=/wine1/
+      - TITLE=GTA2-5
+      - SELKIES_UI_TITLE=GTA2-5
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=en_US.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=800
+      - SELKIES_MANUAL_HEIGHT=600
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config5:/config
+      - ./game:/config/.wine/drive_c
+      - ./game5/player/hiscores.hsc:/config/.wine/drive_c/GTA2/player/hiscores.hsc
+      - ./game5/player/plyslot0.dat:/config/.wine/drive_c/GTA2/player/plyslot0.dat
+      - ./game5/player/plyslot1.dat:/config/.wine/drive_c/GTA2/player/plyslot1.dat
+      - ./game5/player/plyslot2.dat:/config/.wine/drive_c/GTA2/player/plyslot2.dat
+      - ./game5/player/plyslot3.dat:/config/.wine/drive_c/GTA2/player/plyslot3.dat
+      - ./game5/player/plyslot4.dat:/config/.wine/drive_c/GTA2/player/plyslot4.dat
+      - ./game5/player/plyslot5.dat:/config/.wine/drive_c/GTA2/player/plyslot5.dat
+      - ./game5/player/plyslot6.dat:/config/.wine/drive_c/GTA2/player/plyslot6.dat
+      - ./game5/player/plyslot7.dat:/config/.wine/drive_c/GTA2/player/plyslot7.dat
+    ports:
+      - 3015:3000
+      - 3005:3001
+    shm_size: "1gb"
+  wine-gta2-6:
+    image: lscr.io/linuxserver/winegui:latest
+    container_name: wine-gta2-6
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      #- SUBFOLDER=/wine1/
+      - TITLE=GTA2-6
+      - SELKIES_UI_TITLE=GTA2-6
+
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - LC_ALL=en_US.UTF-8
+      - TZ=Europe/Berlin
+      
+      - PIXELFLUX_WAYLAND=true
+      # Optional: Specify device if multiple exist (IE: /dev/dri/renderD129)
+      - DRINODE=/dev/dri/renderD128
+      - DRI_NODE=/dev/dri/renderD128
+      
+      - SELKIES_ENCODER=x264enc
+      - SELKIES_FRAMERATE=30
+      - SELKIES_H264_CRF=30
+      - SELKIES_MANUAL_WIDTH=800
+      - SELKIES_MANUAL_HEIGHT=600
+      - SELKIES_USE_CPU=false|locked
+      - SELKIES_H264_FULLCOLOR=false|locked
+      
+      - SELKIES_ENABLE_COLLAB=False
+      - SELKIES_ENABLE_PLAYER2=False
+      - SELKIES_ENABLE_PLAYER3=False
+      - SELKIES_ENABLE_PLAYER4=False
+      - SELKIES_MICROPHONE_ENABLED=False
+      - SELKIES_GAMEPAD_ENABLED=False
+      - SELKIES_CLIPBOARD_ENABLED=False
+      - SELKIES_FILE_TRANSFERS=none
+      - SELKIES_UI_SHOW_LOGO=False
+      - SELKIES_UI_SIDEBAR_SHOW_CLIPBOARD=False
+      - SELKIES_UI_SIDEBAR_SHOW_FILES=False
+      - SELKIES_UI_SIDEBAR_SHOW_GAMEPADS=False
+      - SELKIES_UI_SIDEBAR_SHOW_APPS=False
+      - NO_GAMEPAD
+    volumes:
+      - ./config6:/config
+      - ./game:/config/.wine/drive_c
+      - ./game6/player/hiscores.hsc:/config/.wine/drive_c/GTA2/player/hiscores.hsc
+      - ./game6/player/plyslot0.dat:/config/.wine/drive_c/GTA2/player/plyslot0.dat
+      - ./game6/player/plyslot1.dat:/config/.wine/drive_c/GTA2/player/plyslot1.dat
+      - ./game6/player/plyslot2.dat:/config/.wine/drive_c/GTA2/player/plyslot2.dat
+      - ./game6/player/plyslot3.dat:/config/.wine/drive_c/GTA2/player/plyslot3.dat
+      - ./game6/player/plyslot4.dat:/config/.wine/drive_c/GTA2/player/plyslot4.dat
+      - ./game6/player/plyslot5.dat:/config/.wine/drive_c/GTA2/player/plyslot5.dat
+      - ./game6/player/plyslot6.dat:/config/.wine/drive_c/GTA2/player/plyslot6.dat
+      - ./game6/player/plyslot7.dat:/config/.wine/drive_c/GTA2/player/plyslot7.dat
+    ports:
+      - 3016:3000
+      - 3006:3001
+    shm_size: "1gb"
+
