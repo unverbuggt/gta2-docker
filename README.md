@@ -30,7 +30,7 @@ Now do the following:
 11. Download GTA2 from [Rockstar Classics](https://gta.com.ua/rockstargames-classics-free-download.phtml).
 12. Extract GTA2.exe from the archive GTA2INSTALLER.ZIP (md5sum 4bf0b5f995d659090b681dd7b410499e) to `./game`.
 13. In WineGUI click on "Run Program..." and select "C:\GTA2.exe" -> "Open".
-14. Note that installation may fail (white screen). You'll have to stop the container `docker container start wine-gta2-1` and retry the previous step.
+14. Note that installation may fail (white screen). You'll have to stop the container `docker container stop wine-gta2-1` and retry the previous step.
 15. "Next >", accept agreement, Change "Install GTA2 to" to "C:\GTA2", "Next >", "Install" and "Finish".
 16. Download [vike's GTA2 update patch enhancement upgrade fix v11.44](https://gtamp.com/GTA2/gta2-installer.exe) (md5sum 53af6eea34a395cbf6a9efd1180190e1) and save to `./game`.
 17. In WineGUI click on "Run Program..." and select "C:\gta2-installer.exe" -> "Open".
