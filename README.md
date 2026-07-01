@@ -12,6 +12,11 @@ and stream it to the players via remote play to the browser.
 
 Clone this repository with `git clone https://github.com/unverbuggt/gta2-docker.git`.
 
+Edit `docker-compose.yaml` to your needs.
+The `environment` section is currently configured for GPU accellerated h264 encoding (I use amdgpu)
+and limits the resolution and bitrate to fit my Internet bandwidth.
+Visit the documentation of [linuxserver/winegui](https://docs.linuxserver.io/images/docker-winegui/) for full reference.
+
 Execute `source create_containers` to create the containers.
 
 Start the first container with `docker container start wine-gta2-1`.
