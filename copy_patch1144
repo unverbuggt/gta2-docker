@@ -1,0 +1,6 @@
+#!/bin/sh
+cp -Rf ./game/users/abc/Documents/GTA2/* ./game/GTA2
+rm -Rf ./game/users/abc/Documents/GTA2
+rm ./game/GTA2.exe
+rm ./game/gta2-installer.exe
+
